@@ -18,3 +18,14 @@ Junit5 - https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
 IDE - Intellij - https://www.jetbrains.com/help/idea/installation-guide.html
 Allure Reports - https://allurereport.org/
 ```
+
+## Reports do Allure
+
+![image](https://github.com/user-attachments/assets/e3d34349-d07f-4e6f-9f69-9c03063a588b)
+
+
+![image](https://github.com/user-attachments/assets/65601414-ba03-4410-910c-4775aeb18985)
+
+
+![image](https://github.com/user-attachments/assets/4dfe7594-d986-47dd-b77d-48be58375469)
+
