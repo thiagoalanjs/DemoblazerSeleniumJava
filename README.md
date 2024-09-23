@@ -2,7 +2,6 @@
 ![image](https://github.com/user-attachments/assets/59fe45d6-c40b-4087-a88e-64d9c1ab47e9)
 
 
-
 # Automação Selenium Webdriver - Java 
 
 Esse projeto é um exemplo de teste automatizado com Selenium Webdriver, Java, Junit5 rodando com maven e integrando com reports do Allure.
@@ -19,7 +18,18 @@ IDE - Intellij - https://www.jetbrains.com/help/idea/installation-guide.html
 Allure Reports - https://allurereport.org/
 ```
 
+## Comando mvn
+
+"mvn clean test" -  roda todos os testes que estão no pacote Tests
+"mvn clean test -DfailIfNoTests=false  -Dtest=Tests.loginUserTest" - vai rodar somente um arquivo nesse exemplo 'loginUserTest'
+
+![image](https://github.com/user-attachments/assets/0f7fc1f2-d081-4b90-af0b-574a2341b2d0)
+
 ## Reports do Allure
+
+Comando para gerar reports:
+
+"allure serve allure-results target/allure-results/" 
 
 ![image](https://github.com/user-attachments/assets/e3d34349-d07f-4e6f-9f69-9c03063a588b)
 
