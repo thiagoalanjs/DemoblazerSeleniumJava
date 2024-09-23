@@ -1,6 +1,5 @@
-<p align="center">
-  <img width="200" height="200" src="https://github.com/user-attachments/assets/1c7c8e4e-d022-4086-8734-6268cdfe1842.png">
-</p>
+![image](https://github.com/user-attachments/assets/c86d03eb-9f9a-4874-aeea-f7715255e17c)
+
 
 # Automaçao Selenium Webdriver - Java 
 
