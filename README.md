@@ -20,9 +20,11 @@ Allure Reports - https://allurereport.org/
 
 ## Comando mvn
 
+```bash
 "mvn clean install" - Instalação das dependências
 "mvn clean test" -  Roda todos os testes que estão no pacote Tests
 "mvn clean test -DfailIfNoTests=false  -Dtest=Tests.loginUserTest" - Roda somente um arquivo nesse exemplo 'loginUserTest'
+```
 
 ![image](https://github.com/user-attachments/assets/0f7fc1f2-d081-4b90-af0b-574a2341b2d0)
 
