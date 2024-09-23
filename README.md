@@ -1,5 +1,6 @@
+<p align="center">
 ![image](https://github.com/user-attachments/assets/c86d03eb-9f9a-4874-aeea-f7715255e17c)
-
+</p>
 
 # Automação Selenium Webdriver - Java 
 
