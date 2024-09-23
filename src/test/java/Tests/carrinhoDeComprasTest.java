@@ -16,6 +16,7 @@ public class carrinhoDeComprasTest extends SetupUtils {
 
     @Test
     @Epic("Interface")
+    @Feature("Carrinho de compras")
     @DisplayName("Adicionar itens ao carrinho")
     public void testAddItensCarrinho() throws InterruptedException {
         //Inserindo produtos
