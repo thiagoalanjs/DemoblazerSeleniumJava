@@ -25,7 +25,7 @@ Allure Reports - https://allurereport.org/
 ```bash
 Para MAC/Linux   System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 
-Para Winindow   System.setProperty("webdriver.chrome.driver", "C://<PATH DO CHROMEDRIVER NA SUA MÁQUINA>");
+Para Windows   System.setProperty("webdriver.chrome.driver", "C://<PATH DO CHROMEDRIVER NA SUA MÁQUINA>");
 ```
 
 ## Comando mvn
