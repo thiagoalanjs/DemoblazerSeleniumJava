@@ -21,6 +21,12 @@ IDE - Intellij - https://www.jetbrains.com/help/idea/installation-guide.html
 
 Allure Reports - https://allurereport.org/
 
+## Configurando o comando 
+```bash
+Para MAC/Linux   System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+
+Para Winindow   System.setProperty("webdriver.chrome.driver", "C://<PATH DO CHROMEDRIVER NA SUA MÁQUINA>");
+```
 
 ## Comando mvn
 
