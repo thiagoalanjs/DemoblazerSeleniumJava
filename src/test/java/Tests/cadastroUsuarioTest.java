@@ -12,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 
+
 public class cadastroUsuarioTest extends SetupUtils {
 
     @Test
@@ -24,6 +25,7 @@ public class cadastroUsuarioTest extends SetupUtils {
         System.out.println("Texto retorno do alert: " + alertTxt.getText());
         String textoEsperado = "Please fill out Username and Password.";
         assertEquals(textoEsperado, alertTxt.getText());
+        alertTxt.accept();
     }
 
     @Test
@@ -36,6 +38,7 @@ public class cadastroUsuarioTest extends SetupUtils {
         System.out.println("Texto retorno do alert: " + alertTxt.getText());
         String textoEsperado = "Please fill out Username and Password.";
         assertEquals(textoEsperado, alertTxt.getText());
+        alertTxt.accept();
     }
 
     @Test
@@ -48,6 +51,7 @@ public class cadastroUsuarioTest extends SetupUtils {
         System.out.println("Texto retorno do alert: " + alertTxt.getText());
         String textoEsperado = "Please fill out Username and Password.";
         assertEquals(textoEsperado, alertTxt.getText());
+        alertTxt.accept();
     }
 
     @Test
@@ -62,6 +66,7 @@ public class cadastroUsuarioTest extends SetupUtils {
         System.out.println("Texto retorno do alert: " + alertTxt.getText());
         String textoEsperado = "This user already exist.";
         assertEquals(textoEsperado, alertTxt.getText());
+        alertTxt.accept();
     }
 
     @Test
@@ -76,5 +81,7 @@ public class cadastroUsuarioTest extends SetupUtils {
         System.out.println("Texto retorno do alert: " + alertTxt.getText());
         String textoEsperado = "Sign up successful.";
         assertEquals(textoEsperado, alertTxt.getText());
+        alertTxt.accept();
     }
+
 }

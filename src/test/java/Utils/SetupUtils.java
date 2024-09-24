@@ -2,28 +2,29 @@ package Utils;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.extension.AfterEachCallback;
-import org.junit.jupiter.api.extension.ExtensionContext;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+import org.junit.jupiter.api.TestInfo;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.concurrent.TimeUnit;
 
 
-public class SetupUtils implements AfterEachCallback {
+public class SetupUtils {
     public WebDriver driver = new ChromeDriver();
     LocalDateTime now = LocalDateTime.now();
     DateTimeFormatter formato = DateTimeFormatter.ofPattern("yyyyMMddhhmmss");
     public String formatoData = now.format(formato);
+    public String MethodName;
+    public String caminhoPath;
 
     @BeforeEach
-    public void SetUp(){
+    public void SetUp(TestInfo testInfo){
+        MethodName = testInfo.getTestMethod().get().getName();
+        caminhoPath = "src/test/java/ImgReports/" + MethodName + formatoData + "_.png";
+
         System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://www.demoblaze.com/");
     }
@@ -33,25 +34,6 @@ public class SetupUtils implements AfterEachCallback {
         if (driver != null) {
             driver.quit();
         }
-
     }
 
-    @Override
-    public void afterEach(ExtensionContext context) {
-        if (context.getExecutionException().isPresent()) {
-            takeScreenshot(context.getDisplayName());
-        }
-    }
-
-    private void takeScreenshot(String testName) {
-        if (driver instanceof TakesScreenshot) {
-            File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            try {
-                Files.copy(screenshot.toPath(), new File("src/test/java/ImgReports/" + testName + formatoData + ".png").toPath());
-                System.out.println("Screenshot saved for test: " + testName);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
 }
